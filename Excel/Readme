@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce projet est un gestionnaire de portefeuille développé sur **Microsoft Excel**, permettant de sélectionner et gérer des **ETF (Exchange Traded Funds)** tout en calculant automatiquement les indicateurs financiers et le risque associé.
+Ce projet est un gestionnaire de portefeuille développé sur Microsoft Excel, permettant de sélectionner et gérer des ETF (Exchange Traded Funds) tout en calculant automatiquement les indicateurs financiers et le risque associé.
 
 Il s’inscrit dans un contexte pédagogique et vise à :  
 - Approfondir les compétences techniques et méthodologiques en ingénierie  
@@ -11,7 +11,7 @@ Il s’inscrit dans un contexte pédagogique et vise à :
 
 L’utilisation d’Excel dans le secteur bancaire, financier et assurantiel est très répandue, ce qui rend ce projet pertinent pour la pratique professionnelle et personnelle.
 
----
+
 
 ## Fonctionnalités principales
 
@@ -28,14 +28,14 @@ L’utilisation d’Excel dans le secteur bancaire, financier et assurantiel est
 - Validation déclenche automatiquement le calcul des **indicateurs financiers**
 
 ### 3. Calcul des indicateurs financiers
-| Indicateur | Description |
-|------------|------------|
-| Rendement quotidien | Variation quotidienne en pourcentage |
-| Rendement annualisé | Extrapolation du rendement sur l’année |
-| Volatilité | Mesure du risque quotidien et annuel du portefeuille |
-| Bêta | Sensibilité d’un ETF par rapport au CAC 40 |
-| Ratio de Sharpe | Rapport rendement / risque (taux sans risque 2%) |
-| Drawdown maximum | Perte maximale après un pic |
+ Indicateur                   |                   Description 
+                              |
+- Rendement quotidien         |            Variation quotidienne en pourcentage 
+- Rendement annualisé         |            Extrapolation du rendement sur l’année 
+- Volatilité                  |            Mesure du risque quotidien et annuel du portefeuille 
+-Bêta                        |            Sensibilité d’un ETF par rapport au CAC 40 
+- Ratio de Sharpe             |            Rapport rendement / risque (taux sans risque 2%) 
+- Drawdown maximum            |            Perte maximale après un pic 
 
 **Coloration conditionnelle** selon le niveau de risque :  
 - Rouge : risque élevé  
@@ -46,14 +46,14 @@ L’utilisation d’Excel dans le secteur bancaire, financier et assurantiel est
 - Graphique en anneau : répartition sectorielle (santé, écologie, matériaux, etc.)  
 - Graphique géographique : répartition des ETF par continent/pays
 
----
+
 
 ## Technologies utilisées
 - **Microsoft Excel (.xlsm)** avec macros VBA  
 - **UserForms** pour interface utilisateur interactive  
 - **Requêtes Web** pour extraction des données financières  
 
----
+
 
 ## Instructions d’utilisation
 1. Ouvrir le fichier Excel (`.xlsm`) et **activer les macros**  
@@ -62,4 +62,4 @@ L’utilisation d’Excel dans le secteur bancaire, financier et assurantiel est
 4. Valider pour générer les indicateurs et graphiques automatiquement  
 5. Les feuilles internes et calculs sont protégés pour éviter toute modification accidentelle
 
----
+
