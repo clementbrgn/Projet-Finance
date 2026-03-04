@@ -23,13 +23,7 @@ encoders = {
 }
 
 
-# ─────────────────────────────────────────
-# Chargement du modèle et des encodeurs
-# ─────────────────────────────────────────
-model = joblib.load('extra_trees_credit_model.pkl')
 
-categorical_cols = ['Sex', 'Housing', 'Saving accounts', 'Checking account']
-encoders = {col: joblib.load(f'{col}_encoder.pkl') for col in categorical_cols}
 
 # ─────────────────────────────────────────
 # Interface
