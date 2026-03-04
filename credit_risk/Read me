@@ -1,1 +1,20 @@
 You can access the app we that link https://projet-finance-acsfv2qqxsrybwey7hfmdd.streamlit.app/
+
+
+How Predictions Are Made
+The prediction model was built using a supervised machine learning approach on the German Credit Risk dataset.
+
+Data Preparation
+The dataset was first cleaned by removing rows with missing values in key financial columns (saving accounts and checking account). Categorical variables such as sex, housing type, saving accounts and checking account were converted into numeric values using Label Encoding, since machine learning models only work with numbers. The target variable was encoded as 1 (good / low risk) and 0 (bad / high risk).
+
+Model Selection
+Four tree-based classifiers were trained and compared: Decision Tree, Random Forest, XGBoost and Extra Trees. Tree-based models were chosen because they handle tabular data well and do not require feature scaling. Since the dataset has a class imbalance (more good loans than bad ones), each model was configured to account for this imbalance during training.
+
+Hyperparameter Tuning
+Each model was optimized using GridSearchCV with 5-fold cross-validation, which means the training data was split into 5 parts and the model was trained and evaluated 5 times on different combinations to find the best configuration.
+
+Final Model
+The Extra Trees Classifier achieved the best accuracy (~66%) on the test set and was selected as the final model. It works by building a large number of decision trees, each using random splits at every node. This randomness reduces overfitting and makes the model more robust and generalizable compared to a single decision tree.
+
+Making a Prediction
+When a user submits applicant information through the app, the inputs are encoded using the same encoders that were fitted during training, then passed to the model which outputs either 1 (good credit) or 0 (bad credit) along with a confidence score.
