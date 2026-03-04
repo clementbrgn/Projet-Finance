@@ -5,6 +5,24 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+import os
+import joblib
+
+# Chemin vers le dossier contenant app.py
+BASE_DIR = os.path.dirname(__file__)
+
+# Charger le modèle
+model_path = os.path.join(BASE_DIR, 'extra_trees_credit_model.pkl')
+model = joblib.load(model_path)
+
+# Charger les encodeurs
+categorical_cols = ['Sex', 'Housing', 'Saving accounts', 'Checking account']
+encoders = {
+    col: joblib.load(os.path.join(BASE_DIR, f'{col}_encoder.pkl'))
+    for col in categorical_cols
+}
+
+
 # ─────────────────────────────────────────
 # Chargement du modèle et des encodeurs
 # ─────────────────────────────────────────
